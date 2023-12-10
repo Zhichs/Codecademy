@@ -50,14 +50,15 @@ const determineWinner = (userChoice, computerChoice) => {
         }
     }
 };
-  // Play the game
+  // Play function
 function playGame(userInput) {
-    let userChoice = getUserChoice(userInput);
-    let computerChoice = getComputerChoice();
+    let userChoice = getUserChoice(userInput); // Call getUserChoice and assign it to userChoice
+    let computerChoice = getComputerChoice(); // Call getComputerChoice and assign it to computerChoice
+    
     // Show results.
     console.log(`User chosed ${userChoice}.`);
     console.log(`Computer chosed ${computerChoice}.`);
     console.log(determineWinner(userChoice, computerChoice));
 }
-
+// Play the game
 playGame("scissors");
