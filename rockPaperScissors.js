@@ -4,7 +4,8 @@ const getUserChoice = (userInput) => {
     if (
         userInput === "rock" ||
         userInput === "paper" ||
-        userInput === "scissors"
+        userInput === "scissors" || 
+        userInput === "bomb"
     ) {
         return userInput;
     } else {
@@ -29,6 +30,9 @@ let getComputerChoice = () => {
 const determineWinner = (userChoice, computerChoice) => {
     if (userChoice === computerChoice) {
         return "Tie!";
+    }
+    if (userChoice === "bomb") {
+        return "User wins!";
     }
     if (userChoice === "rock") {
         if (computerChoice === "paper") {
@@ -61,4 +65,4 @@ function playGame(userInput) {
     console.log(determineWinner(userChoice, computerChoice));
 }
 // Play the game
-playGame("scissors");
+playGame("bomb");
